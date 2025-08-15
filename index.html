@@ -6,9 +6,10 @@
     <title>Experts</title>
     <style>
 body{
-    background-color: #D4CABA;
-    padding:0px;
-    margin: 0;
+   font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #B86254 ,#54B8B5 );
+   
+
 }.myheader{
 background-color: rgb(17, 17, 44);
 padding: 20px;
@@ -35,6 +36,39 @@ padding: 20px;
 background-color: white;
 color: red;
 
+}.form-container{
+background: white;
+padding: 20px;
+border-radius: 10px;
+margin-top: 50px;
+box-shadow: 0 6px 10px rgba(0, 0, 0, 0.8);
+width: 100%;
+max-width: 600px;
+animation: fadeIn 0.5s ease-in-out;
+}h2{
+    text-align: left;
+    color: brown;
+}label{
+    display: block;
+    margin-bottom: 20px;
+    color: rgb(36, 36, 99);
+    font-size: 18px;
+}input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="confirm"]{
+    width: 65%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid cyan;
+}button{
+    width: 55%;
+    padding: 10px;
+    background-color: rgb(70, 3, 3);
+    color: white;
+    border-radius: 6px;
+    font-size: 18px;
 }
     </style>
 </head>
@@ -64,7 +98,7 @@ color: red;
 
             <!--This is the Confirm password field-->
             <label for="confirm">Confirm password</label>
-            <input type="confirm" id="confirm" placeholder="Confirm your password" required>
+            <input type="password" id="confirm" placeholder="Confirm your password" required>
 
             <!--Submit button-->
             <button type="submit">Register</button>
