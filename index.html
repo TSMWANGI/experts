@@ -5,119 +5,178 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experts</title>
     <style>
-body{
-   font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to right, #B86254 ,#54B8B5 );
-   
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-}.myheader{
-background-color: rgb(17, 17, 44);
-padding: 20px;
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to right, #B86254 ,#54B8B5);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
-}.mynav a{
-    color:white;
-    text-decoration: none;
-    margin-left: 40px;
-    font-size: 30px;
+        /* Header navigation */
+        .myheader {
+            background-color: rgb(17, 17, 44);
+            padding: 20px;
+        }
 
-}.mynav a:hover{
-    color:orange;
-    text-decoration: underline;
+        .mynav {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
 
-}
-.register{
-    padding: 10px 14px;
-    background-color:rgb(113, 53, 53);
-    color: white;
-    border-radius: 14px;
-    margin-top: 50px;
-    font-size: 40px;
-}.register:hover{
-background-color: white;
-color: red;
+        .mynav a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            transition: 0.3s;
+        }
 
-}.form-container{
-background: white;
-padding: 20px;
-border-radius: 10px;
-margin-top: 50px;
-box-shadow: 0 6px 10px rgba(0, 0, 0, 0.8);
-width: 100%;
-max-width: 450px;
-animation: fadeIn 0.5s ease-in-out;
-}h2{
-    text-align: left;
-    color: brown;
-}label{
-    display: block;
-    margin-bottom: 20px;
-    color: rgb(36, 36, 99);
-    font-size: 18px;
-}input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="confirm"]{
-    width: 65%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 6px;
-    border: 1px solid cyan;
-}button{
-    width: 55%;
-    padding: 10px;
-    background-color: rgb(42, 3, 70);
-    color: white;
-    border-radius: 6px;
-    font-size: 18px;
-}.note{
-    text-align: center;
-    margin-top: 10px;
-    font-size: 12px;
-    color: rgb(1, 64, 9);
-}
+        .mynav a:hover {
+            color: orange;
+            text-decoration: underline;
+        }
+
+        /* Center the form */
+        .form-wrapper {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Form container */
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 400px;
+            animation: fadeIn 0.6s ease-in-out;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: brown;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: rgb(36, 36, 99);
+            font-size: 16px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 18px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            transition: border 0.3s, box-shadow 0.3s;
+        }
+
+        input:focus {
+            border-color: #54B8B5;
+            box-shadow: 0 0 6px rgba(84, 184, 181, 0.5);
+            outline: none;
+        }
+
+        /* Submit button */
+        button {
+            width: 100%;
+            padding: 12px;
+            background: rgb(42, 3, 70);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: black;
+        }
+
+        /* Small text */
+        .note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: rgb(1, 64, 9);
+        }
+
+        .note a {
+            color: brown;
+            text-decoration: none;
+        }
+
+        .note a:hover {
+            text-decoration: underline;
+            color: red;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
-<header class="myheader">
-    <nav class="mynav">
-        <a href="http://">Home</a>
-        <a href="http://">About Us</a>
-        <a href="http://">Contact us</a>
-    </nav>
-</header>
 <body>
-    <div class="form-container">
-        <h2>Student Registration</h2>
-        <form action="submit" method="post">
+    <!-- Navigation Header -->
+    <header class="myheader">
+        <nav class="mynav">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+        </nav>
+    </header>
 
-            <!--This is the Name field-->
-            <label for="name">Fullname</label>
-            <input type="text" id="name" placeholder="Enter your name" required>
+    <!-- Centered Form -->
+    <div class="form-wrapper">
+        <div class="form-container">
+            <h2>Student Registration</h2>
+            <form action="submit" method="post">
 
-            <!--This is the email field-->
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Enter your E-mail" required>
+                <!-- Full Name -->
+                <label for="name">Fullname</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
 
-            <!--This is the Password field-->
-            <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Enter your password" required>
+                <!-- Email -->
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your E-mail" required>
 
-            <!--This is the Confirm password field-->
-            <label for="confirm">Confirm password</label>
-            <input type="password" id="confirm" placeholder="Confirm your password" required>
+                <!-- Password -->
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
 
-            <!--Submit button-->
-            <button type="submit">Register</button>
-            <br>          
+                <!-- Confirm Password -->
+                <label for="confirm">Confirm password</label>
+                <input type="password" id="confirm" placeholder="Confirm your password" required>
 
+                <!-- Submit button -->
+                <button type="submit">Register</button>
+            </form>
 
-        </form>
-        <p class="note">Already have an account? <a href="http://tsmwangi.github.io/experts/">Login here</a>  </p>
-    <!--  <form action="register.php" method="post">
-  <input type="text" name="username" placeholder="Username" required />
-  <input type="password" name="password" placeholder="Password" required />
-  <button type="submit">Login</button>
-</form> -->
+            <p class="note">Already have an account? 
+                <a href="http://tsmwangi.github.io/experts/">Login here</a>
+            </p>
+        </div>
     </div>
 </body>
-
 </html>
