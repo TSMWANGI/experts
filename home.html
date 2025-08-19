@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: whitesmoke;
+        }header{
+            background-color: rgb(6, 6, 52);
+            color: white;
+            padding: 15px 20px;
+        }.nav-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 1200px;
+            margin: auto;
+        }.logo{
+            font-size: 24px;
+            font-weight: bold;
+            color: orange;
+        }nav ul{
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }nav ul li a{
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }nav ul li a:hover{
+            color: orange;
+            
+            /* Responsive nav */
+        }@media (max-width: 768px){
+            nav ul{
+                flex-direction: column;
+                display: none;
+                background-color: rgb(20, 14, 63);
+                padding: 20px;
+            }nav ul.show{
+                display: flex;
+            }.menu-toggle{
+                display: block;
+                cursor: pointer;
+                font-size: 20px;
+            }
+        
+        }.hero{
+            background: linear-gradient(to right, brown, cyan);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            margin: 50px;
+         
+        }.hero h1{
+            font-size: 46px;
+            margin-bottom: 20px;
+        }.hero p{
+            font-size: 18px;
+            margin-bottom: 30px;
+
+        }.hero a{
+            background-color: orange;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }.hero a:hover{
+            background-color: rgb(124, 51, 5);
+        }
+
+    </style>
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <div class="nav-container">
+            <div class="logo">Experts</div>
+
+            <span class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('show')">=</span>
+
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Couses</a></li>
+                    <li><a href="">Plans</a></li>
+                    <li><a href="">Contact us</a></li>
+                    <li><a href=""></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<!--Hero-->
+<section class="hero">
+    <h1>Welcome to experts</h1>
+    <p>Experts teach you about coding</p>
+    <a href="http://">Join now</a>
+</section>
+
+<!--About us-->
+<section id="about">
+<h2 style="text-align: center; margin-bottom: 30px; ">About us</h2>
+<div class="grid">
+    <div class="card">
+        <img src="MEDIA/IMAGES/About.jpg" alt="About us image" >
+        <h3>Our mission</h3>
+        <p>We empower learners with tech skills like coding, web development, and AI in a fun, practical way.</p>
+    </div>
+
+    <div class="card">
+        <img src="https://media.gettyimages.com/id/143071446/es/foto/estudiantes-trabajan-en-la-biblioteca-en-la-noche.jpg?s=612x612&w=0&k=20&c=1F7F2AAQ640JD6hr-iiS0e9gZopFxzqYRXAOSYEbBeo=" alt="About Our Community">
+        <h3>Our Community</h3>
+        <p>Join thousands of students growing their careers through engaging projects and expert mentorship.</p>
+    </div>
+</div>
+</section>
+</body>
+</html>
