@@ -75,6 +75,58 @@
             font-weight: bold;
         }.hero a:hover{
             background-color: rgb(124, 51, 5);
+        }/*section*/
+        section{
+            padding: 60px 20px;
+            max-width: 500%;
+            margin: auto;
+        }.grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,  minmax(300px, 1fr));
+            gap: 20px;
+        }.card{
+            background: white;
+            padding:20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(103, 77, 77, 0.1);
+            text-align: center;
+        }.card img{
+            width: 100%;
+            border-radius: 12px;
+         
+        }footer{
+            background: rgb(7, 7, 55);
+            color: white;
+            padding: 40px 20px;
+        }.footer-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }.footer-container h4{
+            margin-bottom: 50px;
+            color: orange;
+        }.footer-container ul{
+            list-style: none;
+        }.footer-container ul li{
+            margin-bottom: 10px;
+        }.footer-container ul li a{
+            color: white;
+            text-decoration: none;
+        }.footer-container ul li a:hover{
+            text-decoration: underline;
+            color: orange;
+        }.map{
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+        }.copyright{
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+            border-top: 1px solid gray;
+            padding-top: 10px;
         }
 
     </style>
@@ -91,7 +143,7 @@
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="">About us</a></li>
-                    <li><a href="">Couses</a></li>
+                    <li><a href="">Courses</a></li>
                     <li><a href="">Plans</a></li>
                     <li><a href="">Contact us</a></li>
                     <li><a href=""></a></li>
@@ -122,7 +174,57 @@
         <h3>Our Community</h3>
         <p>Join thousands of students growing their careers through engaging projects and expert mentorship.</p>
     </div>
+
+    
 </div>
 </section>
+<!--Courses-->
+<section class="courses">
+    <h2 style="text-align: center; margin-bottom: 30px;">popular courses</h2>
+    <div class="grid">
+        <div class="card"><h3>Web Development</h3> <p>Learn html,css and javascript</p> </div>
+        <div class="card"><h3>Python programming</h3> <p>Learn html,css and javascript</p>  </div>
+        <div class="card"><h3>Maching</h3><p>Step into the future with ai skills</p> </div>
+        
+    </div>
+</section>
+<!--Footer-->
+<footer>
+
+    <div class="footer-container">
+        <h4>Quick Links</h4>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="http://">About us</a></li>
+            <li><a href="http://">Courses</a></li>
+        </ul>
+    </div>
+<!--Contact-->
+<div>
+    <h4>Contact us</h4>
+    <p>Email: tesladavismwangi@gmail.com</p>
+    <p>Phone: 0114548355</p>
+    <p>Location: Kiambu, Kenya</p>
+</div>
+
+<!--Social Media-->
+<div>
+    <h4>Follow us</h4>
+    <ul>
+        <li><a href="http://">Whatsapp</a></li>
+        <li><a href="http://">Facebook</a></li>
+        <li><a href="http://">Twitter</a></li>
+        <li><a href="http://">Tiktok</a></li>
+        <li><a href="http://">Youtube</a></li>
+    </ul>
+</div>
+<!--Map-->
+<div>
+    <h4>Find us</h4>
+    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.972524765479!2d36.983913573955284!3d-1.1797811355168724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f4127365423b5%3A0xccad4764e7dcba0c!2sRFH%20Healthcare%20-%20Ruiru!5e0!3m2!1sen!2ske!4v1755698466477!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+<p class="copyright">&copy; 2025 experts <br> All Rights Reserved</p>
+</footer>
 </body>
 </html>
